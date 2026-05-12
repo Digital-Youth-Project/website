@@ -259,3 +259,182 @@ p.lead{font-size:1.08rem;color:var(--text);}
 .lang-other{font-size:.78rem;font-weight:500;color:rgba(255,255,255,.42);font-family:var(--font-b);letter-spacing:.04em;transition:color .2s;}
 .lang-other:hover{color:rgba(255,255,255,.85);}
 .lang-sep{font-size:.78rem;color:rgba(255,255,255,.22);font-family:var(--font-b);}
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE IMPROVEMENTS
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Hamburger button ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  flex-shrink: 0;
+  transition: background .2s;
+}
+.nav-hamburger:hover { background: rgba(255,255,255,.08); }
+.nav-hamburger span {
+  display: block;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all .25s;
+  transform-origin: center;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile nav overlay ── */
+.nav-mobile-menu {
+  display: none;
+  position: absolute;
+  top: 64px;
+  left: 0; right: 0;
+  background: var(--navy-2);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  padding: 12px 0 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.4);
+  z-index: 99;
+}
+.nav-mobile-menu.open { display: block; }
+.nav-mobile-menu a {
+  display: block;
+  padding: 11px 24px;
+  font-size: .9rem;
+  font-family: var(--font-b);
+  font-weight: 500;
+  color: rgba(255,255,255,.75);
+  transition: color .15s, background .15s;
+}
+.nav-mobile-menu a:hover,
+.nav-mobile-menu a.active { color: #fff; background: rgba(255,255,255,.06); }
+.nav-mobile-section {
+  font-size: .62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: rgba(255,255,255,.3);
+  font-family: var(--font-b);
+  padding: 14px 24px 4px;
+}
+.nav-mobile-menu .nav-mobile-study {
+  padding-left: 38px;
+  font-size: .85rem;
+  color: rgba(255,255,255,.6);
+}
+.nav-mobile-divider {
+  height: 1px;
+  background: rgba(255,255,255,.07);
+  margin: 8px 24px;
+}
+.nav-mobile-lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px 4px;
+}
+.nav-mobile-lang .lang-current { font-size: .8rem; font-weight: 700; color: #fff; }
+.nav-mobile-lang .lang-other   { font-size: .8rem; color: rgba(255,255,255,.4); }
+.nav-mobile-lang .lang-sep     { font-size: .8rem; color: rgba(255,255,255,.2); }
+
+/* ── nav must be relative so overlay positions under it ── */
+.nav { position: sticky; top: 0; z-index: 100; }
+.nav-inner { position: relative; }
+
+/* ── Hero mobile ── */
+@media (max-width: 640px) {
+  .nav-hamburger { display: flex; }
+  .nav-links { display: none; }
+
+  .hero { padding: 56px 20px 48px; }
+  .hero h1 { font-size: 2rem; }
+  .hero-lead { font-size: .95rem; }
+  .hero-actions { flex-direction: column; gap: 10px; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .hero-stats { gap: 20px; padding-top: 28px; margin-top: 40px; }
+  .hero-stat-val { font-size: 1.7rem; }
+  .hero-stats > div { min-width: 80px; }
+
+  /* Section spacing */
+  .section { padding: 44px 0; }
+  .section-header { margin-bottom: 28px; }
+  .container, .container-narrow { padding: 0 18px; }
+
+  /* Pillar cards */
+  .pillars { gap: 14px; }
+  .pillar { padding: 24px 20px; }
+
+  /* Study cards */
+  .studies-grid { gap: 14px; }
+  .study-card-body { padding: 20px; }
+
+  /* Team cards */
+  .team-grid { gap: 18px; }
+  .team-card { padding: 22px 20px; }
+
+  /* CTA banner */
+  .cta-banner { padding: 48px 20px; }
+  .cta-inner { flex-direction: column; gap: 20px; }
+  .cta-actions .btn { width: 100%; justify-content: center; }
+
+  /* Page hero */
+  .page-hero { padding: 44px 20px; }
+  .page-hero h1 { font-size: 1.9rem; }
+
+  /* Study hero */
+  .study-hero { padding: 44px 20px 40px; }
+  .study-hero h1 { font-size: 1.35rem; }
+
+  /* Study layout: sidebar goes ABOVE content on mobile */
+  .study-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px 18px 56px;
+  }
+  /* Swap order: sidebar first, main content second */
+  .study-sidebar { order: -1; position: static; }
+  .study-main    { order:  1; }
+
+  /* Study meta card */
+  .study-meta-card { padding: 18px; }
+
+  /* Contact page */
+  .contact-grid { gap: 28px; }
+  .affil-card { padding: 20px; }
+
+  /* Collab card */
+  .collab-card { padding: 24px 20px; }
+  .collab-types { gap: 8px; }
+  .collab-type { font-size: .82rem; }
+
+  /* Footer */
+  .footer { padding: 28px 18px; }
+  .footer-inner { flex-direction: column; gap: 12px; text-align: center; }
+  .footer-links { justify-content: center; }
+
+  /* Stream cards (EMA) */
+  .stream-card { padding: 18px 20px; }
+
+  /* PDF modal */
+  .modal-box { height: 92vh; border-radius: 10px 10px 0 0; }
+  .modal-overlay { padding: 0; align-items: flex-end; }
+}
+
+/* ── Tablet tweaks (641–900px) ── */
+@media (min-width: 641px) and (max-width: 900px) {
+  .hero-stats { gap: 28px; }
+  .study-layout { grid-template-columns: 1fr; gap: 36px; }
+  .study-sidebar { position: static; order: -1; }
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .cta-inner { flex-direction: column; gap: 20px; }
+  .cta-actions .btn { width: auto; }
+}

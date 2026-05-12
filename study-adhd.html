@@ -34,9 +34,52 @@
         <span class="lang-sep">|</span>
         <a href="nl/study-adhd.html" class="lang-other">NL</a>
       </div>
+<button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     </div>
   </div>
 </nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <div class="nav-mobile-divider"></div>
+    <div class="nav-mobile-section">Research</div>
+    <a href="study-focus-groups.html" class="nav-mobile-study">I &nbsp; Focus Groups</a>
+    <a href="study-mental-health.html" class="nav-mobile-study">II &nbsp; Mental Health</a>
+    <a href="study-adhd.html" class="nav-mobile-study">III &nbsp; ADHD &amp; Digital Media</a>
+    <a href="study-content.html" class="nav-mobile-study">IV &nbsp; Social Media Content</a>
+    <a href="study-ema.html" class="nav-mobile-study">V &nbsp; Daily Dynamics</a>
+    <a href="study-perceived-addiction.html" class="nav-mobile-study">VI &nbsp; Perceived Addiction</a>
+    <div class="nav-mobile-divider"></div>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
+    <div class="nav-mobile-divider"></div>
+    <div class="nav-mobile-lang">
+      <span class="lang-current">EN</span>
+      <span class="lang-sep">|</span>
+      <a href="nl/study-adhd.html" class="lang-other">NL</a>
+    </div>
+  </div>
+<div class="nav-mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <div class="nav-mobile-divider"></div>
+    <div class="nav-mobile-section">Research</div>
+    <a href="study-focus-groups.html" class="nav-mobile-study">I &nbsp; Focus Groups</a>
+    <a href="study-mental-health.html" class="nav-mobile-study">II &nbsp; Mental Health</a>
+    <a href="study-adhd.html" class="nav-mobile-study">III &nbsp; ADHD &amp; Digital Media</a>
+    <a href="study-content.html" class="nav-mobile-study">IV &nbsp; Social Media Content</a>
+    <a href="study-ema.html" class="nav-mobile-study">V &nbsp; Daily Dynamics</a>
+    <a href="study-perceived-addiction.html" class="nav-mobile-study">VI &nbsp; Perceived Addiction</a>
+    <div class="nav-mobile-divider"></div>
+    <a href="team.html">Team</a>
+    <a href="contact.html">Contact</a>
+    <div class="nav-mobile-divider"></div>
+    <div class="nav-mobile-lang">
+      <span class="lang-current">EN</span>
+      <span class="lang-sep">|</span>
+      <a href="nl/study-adhd.html" class="lang-other">NL</a>
+    </div>
+  </div>
 
 <section class="study-hero">
   <div class="study-hero-dots"></div>
@@ -161,5 +204,33 @@ function closeModal(id){document.getElementById(id).classList.remove('open');doc
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.open').forEach(m=>m.classList.remove('open'));document.body.style.overflow='';}});
 </script>
 
+<script>
+(function(){
+  var btn = document.getElementById('navHamburger');
+  var menu = document.getElementById('mobileMenu');
+  if(!btn || !menu) return;
+  btn.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+  });
+  // Close on link click
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', false);
+    });
+  });
+  // Close on outside tap
+  document.addEventListener('click', function(e){
+    if(!btn.contains(e.target) && !menu.contains(e.target)){
+      menu.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', false);
+    }
+  });
+})();
+</script>
 </body>
 </html>
