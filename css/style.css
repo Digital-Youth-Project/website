@@ -296,7 +296,7 @@ p.lead{font-size:1.08rem;color:var(--text);}
 /* ── Mobile nav overlay ── */
 .nav-mobile-menu {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 64px;
   left: 0; right: 0;
   background: var(--navy-2);
@@ -347,7 +347,7 @@ p.lead{font-size:1.08rem;color:var(--text);}
 .nav-mobile-lang .lang-sep     { font-size: .8rem; color: rgba(255,255,255,.2); }
 
 /* ── nav must be relative so overlay positions under it ── */
-.nav { position: sticky; top: 0; z-index: 100; }
+.nav { position: relative; z-index: 100; }
 .nav-inner { position: relative; }
 
 /* ── Hero mobile ── */
