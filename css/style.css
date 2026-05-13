@@ -438,3 +438,5 @@ p.lead{font-size:1.08rem;color:var(--text);}
   .cta-inner { flex-direction: column; gap: 20px; }
   .cta-actions .btn { width: auto; }
 }
+
+.news-logo-elsevier img { object-fit: contain; padding: 6px; }
