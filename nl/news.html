@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Laatste nieuws, updates en aankondigingen van het Digitale Jeugd Project aan de Universiteit van Amsterdam.">
+<title>Nieuws · Digitale Jeugd Project</title>
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.news-list { display: flex; flex-direction: column; gap: 0; }
+.news-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0 36px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.news-item:last-child { border-bottom: none; }
+.news-meta { padding-top: 3px; }
+.news-date { font-family: var(--font-b); font-size: .78rem; font-weight: 600; color: var(--light); margin-bottom: 8px; white-space: nowrap; }
+.news-tag { display: inline-block; font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; padding: 3px 9px; border-radius: 100px; font-family: var(--font-b); white-space: nowrap; }
+.tag-recruitment { background: var(--blue-soft); color: var(--blue); }
+.tag-conference  { background: var(--teal-soft); color: #007A88; }
+.tag-collaboration{ background: #EDE9FE; color: #5B21B6; }
+.tag-grant       { background: #EDFDF4; color: #0A7A45; }
+.tag-publication { background: #FFF4EC; color: #B04A00; }
+.news-content h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; font-family: var(--font-d); line-height: 1.3; }
+.news-content p  { font-size: .9rem; color: var(--muted); line-height: 1.8; margin: 0; }
+.news-content a  { color: var(--blue); font-weight: 600; }
+.news-content a:hover { text-decoration: underline; }
+@media (max-width: 640px) { .news-item { grid-template-columns: 1fr; gap: 12px; padding: 28px 0; } .news-date { margin-bottom: 4px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Digitale <span>Jeugd</span> Project</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="research.html">Onderzoek</a>
+        <div class="nav-dropdown-menu">
+          <a href="study-focus-groups.html"><span class="study-num">I</span>Focusgroepen</a>
+          <a href="study-mental-health.html"><span class="study-num">II</span>Geestelijke Gezondheid</a>
+          <a href="study-adhd.html"><span class="study-num">III</span>ADHD &amp; Digitale Media</a>
+          <a href="study-content.html"><span class="study-num">IV</span>Social Media-inhoud</a>
+          <a href="study-ema.html"><span class="study-num">V</span>Dagelijkse Dynamiek <span class="nav-badge">Nieuw</span></a>
+          <a href="study-perceived-addiction.html"><span class="study-num">VI</span>Ervaren Verslaving</a>
+        </div>
+      </div>
+      <a href="team.html">Team</a>
+      <a href="news.html" class="active">Nieuws</a>
+      <a href="contact.html">Contact</a>
+      <div class="lang-switch">
+        <a href="../news.html" class="lang-other">EN</a>
+        <span class="lang-sep">|</span>
+        <span class="lang-current">NL</span>
+      </div>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <div class="nav-mobile-divider"></div>
+  <div class="nav-mobile-section">Onderzoek</div>
+  <a href="study-focus-groups.html" class="nav-mobile-study">I &nbsp; Focusgroepen</a>
+  <a href="study-mental-health.html" class="nav-mobile-study">II &nbsp; Geestelijke Gezondheid</a>
+  <a href="study-adhd.html" class="nav-mobile-study">III &nbsp; ADHD &amp; Digitale Media</a>
+  <a href="study-content.html" class="nav-mobile-study">IV &nbsp; Social Media-inhoud</a>
+  <a href="study-ema.html" class="nav-mobile-study">V &nbsp; Dagelijkse Dynamiek</a>
+  <a href="study-perceived-addiction.html" class="nav-mobile-study">VI &nbsp; Ervaren Verslaving</a>
+  <div class="nav-mobile-divider"></div>
+  <a href="team.html">Team</a>
+  <a href="news.html">Nieuws</a>
+  <a href="contact.html">Contact</a>
+  <div class="nav-mobile-divider"></div>
+  <div class="nav-mobile-lang">
+    <a href="../news.html" class="lang-other">EN</a>
+    <span class="lang-sep">|</span>
+    <span class="lang-current">NL</span>
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-dots"></div>
+  <div class="page-hero-inner">
+    <div class="section-label" style="margin-bottom:12px;">Updates</div>
+    <h1>Nieuws</h1>
+    <p>Recente activiteiten, aankondigingen en mijlpalen van het Digitale Jeugd Project.</p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="news-list">
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">Mei 2026</div>
+          <span class="news-tag tag-recruitment">Werving</span>
+        </div>
+        <div class="news-content">
+          <h3>Werving voor Studie V is gestart</h3>
+          <p>We werven actief deelnemers van 16–21 jaar voor onze tweeweekse smartphonestudie over social media en emotioneel welzijn. Als u met jongeren werkt of iemand kent die in aanmerking komt, zijn scholen, klinieken en jongerenorganisaties van harte welkom contact op te nemen — elke deelnemer levert een waardevolle bijdrage.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">2026</div>
+          <span class="news-tag tag-conference">Conferentie</span>
+        </div>
+        <div class="news-content">
+          <h3>Focusgroepasstudie gepresenteerd op SRA Biennial Meeting — Toronto, Canada</h3>
+          <p>Luka Todorović presenteerde een poster over Studie I op de tweejaarlijkse bijeenkomst van de Society for Research on Adolescence — een van de toonaangevende internationale bijeenkomsten van adolescentieonderzoekers — en deelde vroege bevindingen uit ons focusgroeponderzoek met Nederlandse tieners. Helle Larsen woonde de conferentie bij en organiseerde een symposium.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">2026</div>
+          <span class="news-tag tag-collaboration">Samenwerking</span>
+        </div>
+        <div class="news-content">
+          <h3>Erasmus+-aanvraag ingediend met Europese partners</h3>
+          <p>Het Digitale Jeugd Project sloot zich aan bij een consortium onder leiding van Fundació Pere Tarrés (Spanje) voor een Erasmus+ KA220-subsidieaanvraag van €250.000 — een belangrijke stap in het vertalen van DJP-onderzoek naar praktische tools voor digitaal welzijn van jongeren in onderwijs- en vrijetijdsomgevingen in Europa.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">Maart 2026</div>
+          <span class="news-tag tag-grant">Subsidie</span>
+        </div>
+        <div class="news-content">
+          <h3>Onderzoeksbeurs toegekend door Amsterdams Universiteitsfonds</h3>
+          <p>Het Digitale Jeugd Project ontving een onderzoeksbeurs van €10.360 van het Amsterdams Universiteitsfonds ter ondersteuning van Studie V — een erkenning die de tweeweekse EMA-studie naar dagelijkse social mediadynamiek en emotioneel welzijn mogelijk maakt, en waarvoor we dankbaar zijn.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">Januari 2026</div>
+          <span class="news-tag tag-publication">Publicatie</span>
+        </div>
+        <div class="news-content">
+          <h3>Studie III gepubliceerd in Addictive Behaviors</h3>
+          <p>Onze laboratoriumstudie naar ADHD-symptomen en problematisch digitaal mediagebruik bij jongvolwassenen is nu gepubliceerd in Addictive Behaviors. <a href="https://doi.org/10.1016/j.addbeh.2026.108608" target="_blank">Lees het hier →</a></p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">September 2025</div>
+          <span class="news-tag tag-publication">Publicatie</span>
+        </div>
+        <div class="news-content">
+          <h3>Studie II gepubliceerd in Journal of Research on Adolescence</h3>
+          <p>Onze tweejarige longitudinale studie met 645 Nederlandse adolescenten is nu beschikbaar als open access in het Journal of Research on Adolescence. Het artikel pakt een van de centrale debatten in het veld aan — wat komt eerst, emotionele problemen of problematisch gebruik — en stelt vast dat het antwoord sterk afhangt van wie je het vraagt. <a href="https://doi.org/10.1111/jora.70076" target="_blank">Lees het hier →</a></p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">April 2025</div>
+          <span class="news-tag tag-conference">Conferentie</span>
+        </div>
+        <div class="news-content">
+          <h3>Poster en flash talk op Digital Media and Developing Minds Congress — Washington DC, VS</h3>
+          <p>Bevindingen uit ons onderzoek naar geestelijke gezondheid en problematisch digitaal mediagebruik bij adolescenten werden gepresenteerd op dit internationale wetenschappelijk congres, dat enkele van de toonaangevende onderzoekers op het snijvlak van technologie en jeugdontwikkeling samenbrengt.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2>Op de hoogte blijven?</h2>
+      <p>Neem contact op en wij houden u op de hoogte van nieuwe studies, publicaties en samenwerkingsmogelijkheden.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-primary">Neem contact op</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">Digitale <span>Jeugd</span> Project · UvA</div>
+    <div class="footer-copy">© 2026 Digitale Jeugd Project · Universiteit van Amsterdam</div>
+    <div class="footer-links">
+      <a href="research.html">Onderzoek</a>
+      <a href="team.html">Team</a>
+      <a href="news.html">Nieuws</a>
+      <a href="contact.html">Contact</a>
+      <a href="mailto:djproject-fmg@uva.nl">E-mail</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var btn=document.getElementById('navHamburger');var menu=document.getElementById('mobileMenu');if(!btn||!menu)return;btn.addEventListener('click',function(){var open=menu.classList.toggle('open');btn.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);});menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded',false);});});document.addEventListener('click',function(e){if(!btn.contains(e.target)&&!menu.contains(e.target)){menu.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded',false);}});})();
+</script>
+</body>
+</html>

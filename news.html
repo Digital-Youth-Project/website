@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Latest news, updates, and announcements from the Digital Youth Project at the University of Amsterdam.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Digital Youth Project">
+<meta property="og:title" content="News · Digital Youth Project">
+<meta property="og:description" content="Latest news, updates, and announcements from the Digital Youth Project.">
+<meta property="og:image" content="https://digital-youth-project.github.io/website/og-image.jpg">
+<title>News · Digital Youth Project</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon-180.png">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.news-list { display: flex; flex-direction: column; gap: 0; }
+.news-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0 36px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.news-item:last-child { border-bottom: none; }
+.news-meta { padding-top: 3px; }
+.news-date {
+  font-family: var(--font-b);
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--light);
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+.news-tag {
+  display: inline-block;
+  font-size: .6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  padding: 3px 9px;
+  border-radius: 100px;
+  font-family: var(--font-b);
+  white-space: nowrap;
+}
+.tag-recruitment { background: var(--blue-soft); color: var(--blue); }
+.tag-conference  { background: var(--teal-soft); color: #007A88; }
+.tag-collaboration{ background: #EDE9FE; color: #5B21B6; }
+.tag-grant       { background: #EDFDF4; color: #0A7A45; }
+.tag-publication { background: #FFF4EC; color: #B04A00; }
+.news-content h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+  font-family: var(--font-d);
+  line-height: 1.3;
+}
+.news-content p {
+  font-size: .9rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0;
+}
+.news-content a { color: var(--blue); font-weight: 600; }
+.news-content a:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .news-item { grid-template-columns: 1fr; gap: 12px; padding: 28px 0; }
+  .news-date { margin-bottom: 4px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Digital <span>Youth</span> Project</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <div class="nav-dropdown">
+        <a href="research.html">Research</a>
+        <div class="nav-dropdown-menu">
+          <a href="study-focus-groups.html"><span class="study-num">I</span>Focus Groups</a>
+          <a href="study-mental-health.html"><span class="study-num">II</span>Mental Health</a>
+          <a href="study-adhd.html"><span class="study-num">III</span>ADHD &amp; Digital Media</a>
+          <a href="study-content.html"><span class="study-num">IV</span>Social Media Content</a>
+          <a href="study-ema.html"><span class="study-num">V</span>Daily Dynamics <span class="nav-badge">New</span></a>
+          <a href="study-perceived-addiction.html"><span class="study-num">VI</span>Perceived Addiction</a>
+        </div>
+      </div>
+      <a href="team.html">Team</a>
+      <a href="news.html" class="active">News</a>
+      <a href="contact.html">Contact</a>
+      <div class="lang-switch">
+        <span class="lang-current">EN</span>
+        <span class="lang-sep">|</span>
+        <a href="nl/news.html" class="lang-other">NL</a>
+      </div>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <div class="nav-mobile-divider"></div>
+  <div class="nav-mobile-section">Research</div>
+  <a href="study-focus-groups.html" class="nav-mobile-study">I &nbsp; Focus Groups</a>
+  <a href="study-mental-health.html" class="nav-mobile-study">II &nbsp; Mental Health</a>
+  <a href="study-adhd.html" class="nav-mobile-study">III &nbsp; ADHD &amp; Digital Media</a>
+  <a href="study-content.html" class="nav-mobile-study">IV &nbsp; Social Media Content</a>
+  <a href="study-ema.html" class="nav-mobile-study">V &nbsp; Daily Dynamics</a>
+  <a href="study-perceived-addiction.html" class="nav-mobile-study">VI &nbsp; Perceived Addiction</a>
+  <div class="nav-mobile-divider"></div>
+  <a href="team.html">Team</a>
+  <a href="news.html">News</a>
+  <a href="contact.html">Contact</a>
+  <div class="nav-mobile-divider"></div>
+  <div class="nav-mobile-lang">
+    <span class="lang-current">EN</span>
+    <span class="lang-sep">|</span>
+    <a href="nl/news.html" class="lang-other">NL</a>
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-dots"></div>
+  <div class="page-hero-inner">
+    <div class="section-label" style="margin-bottom:12px;">Updates</div>
+    <h1>News</h1>
+    <p>Recent activity, announcements, and milestones from the Digital Youth Project.</p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="news-list">
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">May 2026</div>
+          <span class="news-tag tag-recruitment">Recruitment</span>
+        </div>
+        <div class="news-content">
+          <h3>Study V recruitment is open</h3>
+          <p>We are actively recruiting participants aged 16–21 for our two-week smartphone study on social media and emotional well-being. If you work with young people or know someone who fits the profile, schools, clinics, and youth organisations interested in facilitating recruitment are warmly encouraged to reach out — every participant makes a valuable contribution.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">2026</div>
+          <span class="news-tag tag-conference">Conference</span>
+        </div>
+        <div class="news-content">
+          <h3>Focus groups study presented at SRA Biennial Meeting — Toronto, Canada</h3>
+          <p>Luka Todorović presented a poster on Study I at the Society for Research on Adolescence biennial meeting — one of the leading international gatherings of adolescence researchers — sharing early findings from our focus group work with Dutch teenagers. Helle Larsen attended the conference and organised a symposium.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">2026</div>
+          <span class="news-tag tag-collaboration">Collaboration</span>
+        </div>
+        <div class="news-content">
+          <h3>Erasmus+ application submitted with European partners</h3>
+          <p>The Digital Youth Project joined a consortium led by Fundació Pere Tarrés (Spain) in applying for an Erasmus+ KA220 grant of €250,000 — a significant step toward translating DYP research into practical tools for youth digital well-being across educational and leisure settings in Europe.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">March 2026</div>
+          <span class="news-tag tag-grant">Grant</span>
+        </div>
+        <div class="news-content">
+          <h3>Amsterdam University Fund grant awarded</h3>
+          <p>The Digital Youth Project received a research grant of €10,360 from the Amsterdam University Fund to support Study V — a recognition that makes the two-week EMA study on daily social media dynamics and emotional well-being possible, and that we are grateful for.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">January 2026</div>
+          <span class="news-tag tag-publication">Publication</span>
+        </div>
+        <div class="news-content">
+          <h3>Study III published in Addictive Behaviors</h3>
+          <p>Our laboratory study on ADHD symptoms and problematic digital media use in emerging adults is now published in Addictive Behaviors. <a href="https://doi.org/10.1016/j.addbeh.2026.108608" target="_blank">Read it here →</a></p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">September 2025</div>
+          <span class="news-tag tag-publication">Publication</span>
+        </div>
+        <div class="news-content">
+          <h3>Study II published in Journal of Research on Adolescence</h3>
+          <p>Our two-year longitudinal study following 645 Dutch adolescents is now available open access in the Journal of Research on Adolescence. The paper tackles one of the field's central debates — what comes first, emotional problems or problematic use — and finds that the answer depends meaningfully on who you are asking about. <a href="https://doi.org/10.1111/jora.70076" target="_blank">Read it here →</a></p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-meta">
+          <div class="news-date">April 2025</div>
+          <span class="news-tag tag-conference">Conference</span>
+        </div>
+        <div class="news-content">
+          <h3>Poster and flash talk at Digital Media and Developing Minds Congress — Washington DC, USA</h3>
+          <p>Findings from our research on mental health and problematic digital media use in adolescents were presented at this international scientific congress, bringing together some of the leading researchers working at the intersection of technology and youth development.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2>Want to stay informed?</h2>
+      <p>Get in touch and we will keep you updated on new studies, publications, and collaboration opportunities.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-primary">Contact us</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">Digital <span>Youth</span> Project · UvA</div>
+    <div class="footer-copy">© 2026 Digital Youth Project · University of Amsterdam</div>
+    <div class="footer-links">
+      <a href="research.html">Research</a>
+      <a href="team.html">Team</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+      <a href="mailto:djproject-fmg@uva.nl">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var btn=document.getElementById('navHamburger');var menu=document.getElementById('mobileMenu');if(!btn||!menu)return;btn.addEventListener('click',function(){var open=menu.classList.toggle('open');btn.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);});menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded',false);});});document.addEventListener('click',function(e){if(!btn.contains(e.target)&&!menu.contains(e.target)){menu.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded',false);}});})();
+</script>
+</body>
+</html>

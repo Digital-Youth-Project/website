@@ -13,6 +13,8 @@
   <url><loc>https://digital-youth-project.github.io/website/study-ema.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://digital-youth-project.github.io/website/study-perceived-addiction.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
 
+  <url><loc>https://digital-youth-project.github.io/website/news.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
   <!-- Dutch pages -->
   <url><loc>https://digital-youth-project.github.io/website/nl/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://digital-youth-project.github.io/website/nl/research.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
@@ -24,5 +26,7 @@
   <url><loc>https://digital-youth-project.github.io/website/nl/study-content.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://digital-youth-project.github.io/website/nl/study-ema.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://digital-youth-project.github.io/website/nl/study-perceived-addiction.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+
+  <url><loc>https://digital-youth-project.github.io/website/nl/news.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
 
 </urlset>
