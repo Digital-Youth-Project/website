@@ -13,56 +13,50 @@
 <style>
 .news-list { display: flex; flex-direction: column; gap: 0; }
 .news-item {
+  display: grid;
+  grid-template-columns: 1fr 72px;
+  gap: 0 28px;
   padding: 44px 0;
   border-bottom: 1px solid var(--border);
+  align-items: start;
 }
 .news-item:last-child { border-bottom: none; }
+.news-item-body { min-width: 0; }
 .news-top {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 14px;
 }
-.news-date {
-  font-family: var(--font-b);
-  font-size: .78rem;
-  font-weight: 600;
-  color: var(--light);
-}
-.news-tag {
-  display: inline-block;
-  font-size: .6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  padding: 3px 9px;
-  border-radius: 100px;
-  font-family: var(--font-b);
-}
+.news-date { font-family: var(--font-b); font-size: .78rem; font-weight: 600; color: var(--light); }
+.news-tag { display: inline-block; font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; padding: 3px 9px; border-radius: 100px; font-family: var(--font-b); }
 .tag-recruitment  { background: var(--blue-soft); color: var(--blue); }
 .tag-conference   { background: var(--teal-soft); color: #007A88; }
 .tag-collaboration{ background: #EDE9FE; color: #5B21B6; }
 .tag-grant        { background: #EDFDF4; color: #0A7A45; }
 .tag-publication  { background: #FFF4EC; color: #B04A00; }
-.news-content h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 12px;
-  font-family: var(--font-d);
-  line-height: 1.3;
-}
-.news-content p {
-  font-size: .92rem;
-  color: var(--muted);
-  line-height: 1.8;
-  margin: 0;
-  max-width: 720px;
-}
-.news-content a { color: var(--blue); font-weight: 600; }
+.news-content h3 { font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; font-family: var(--font-d); line-height: 1.3; }
+.news-content p  { font-size: .92rem; color: var(--muted); line-height: 1.8; margin: 0; max-width: 680px; }
+.news-content a  { color: var(--blue); font-weight: 600; }
 .news-content a:hover { text-decoration: underline; }
+.news-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.news-logo.logo-dark { background: #000; }
 @media (max-width: 640px) {
-  .news-item { padding: 32px 0; }
+  .news-item { grid-template-columns: 1fr; gap: 16px; padding: 32px 0; }
+  .news-logo { width: 56px; height: 56px; }
 }
 </style>
 </head>
@@ -133,74 +127,95 @@
   <div class="container">
     <div class="news-list">
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">Mei 2026</span>
-          <span class="news-tag tag-recruitment">Werving</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">Mei 2026</span>
+            <span class="news-tag tag-recruitment">Werving</span>
+          </div>
+          <div class="news-content">
+            <h3>We zijn op zoek naar deelnemers!</h3>
+            <p>We werven actief deelnemers van 16–21 jaar voor onze tweeweekse smartphonestudie over social media en emotioneel welzijn. Als u met jongeren werkt of iemand kent die in aanmerking komt, zijn scholen, klinieken en jongerenorganisaties van harte welkom contact op te nemen — elke deelnemer levert een waardevolle bijdrage.</p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Werving voor Studie V is gestart</h3>
-          <p>We werven actief deelnemers van 16–21 jaar voor onze tweeweekse smartphonestudie over social media en emotioneel welzijn. Als u met jongeren werkt of iemand kent die in aanmerking komt, zijn scholen, klinieken en jongerenorganisaties van harte welkom contact op te nemen — elke deelnemer levert een waardevolle bijdrage.</p>
-        </div>
+        <div class="news-logo logo-dark"><img src="../img/logo-uva.png" alt=""></div>
       </div>
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">April 2026</span>
-          <span class="news-tag tag-conference">Conferentie</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">April 2026</span>
+            <span class="news-tag tag-conference">Conferentie</span>
+          </div>
+          <div class="news-content">
+            <h3>Ons werk gepresenteerd op de SRA Biennial Meeting — Toronto, Canada</h3>
+            <p>Luka Todorović presenteerde een poster over Studie I op de tweejaarlijkse bijeenkomst van de Society for Research on Adolescence — een van de toonaangevende internationale bijeenkomsten van adolescentieonderzoekers — en deelde vroege bevindingen uit ons focusgroeponderzoek met Nederlandse tieners. Helle Larsen woonde de conferentie bij en organiseerde een symposium.</p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Focusgroepasstudie gepresenteerd op SRA Biennial Meeting — Toronto, Canada</h3>
-          <p>Luka Todorović presenteerde een poster over Studie I op de tweejaarlijkse bijeenkomst van de Society for Research on Adolescence — een van de toonaangevende internationale bijeenkomsten van adolescentieonderzoekers — en deelde vroege bevindingen uit ons focusgroeponderzoek met Nederlandse tieners. Helle Larsen woonde de conferentie bij en organiseerde een symposium.</p>
-        </div>
+        <div class="news-logo"><img src="../img/logo-sra-2026.jpg" alt=""></div>
       </div>
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">Maart 2026</span>
-          <span class="news-tag tag-collaboration">Samenwerking</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">Maart 2026</span>
+            <span class="news-tag tag-collaboration">Samenwerking</span>
+          </div>
+          <div class="news-content">
+            <h3>Erasmus+-aanvraag ingediend met Europese partners</h3>
+            <p>Het Digitale Jeugd Project sloot zich aan bij een consortium onder leiding van Fundació Pere Tarrés (Spanje) voor een Erasmus+ KA220-subsidieaanvraag van €250.000 — een belangrijke stap in het vertalen van DJP-onderzoek naar praktische tools voor digitaal welzijn van jongeren in onderwijs- en vrijetijdsomgevingen in Europa. We wachten op de beslissing in juli 2026.</p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Erasmus+-aanvraag ingediend met Europese partners</h3>
-          <p>Het Digitale Jeugd Project sloot zich aan bij een consortium onder leiding van Fundació Pere Tarrés (Spanje) voor een Erasmus+ KA220-subsidieaanvraag van €250.000 — een belangrijke stap in het vertalen van DJP-onderzoek naar praktische tools voor digitaal welzijn van jongeren in onderwijs- en vrijetijdsomgevingen in Europa.</p>
-        </div>
+        <div class="news-logo"><img src="../img/logo-pere-tarres.jpg" alt=""></div>
       </div>
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">April 2026</span>
-          <span class="news-tag tag-grant">Subsidie</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">April 2026</span>
+            <span class="news-tag tag-grant">Subsidie</span>
+          </div>
+          <div class="news-content">
+            <h3>Onderzoeksbeurs toegekend door Amsterdams Universiteitsfonds</h3>
+            <p>Het Digitale Jeugd Project ontving een onderzoeksbeurs van €10.360 van het Amsterdams Universiteitsfonds ter ondersteuning van Studie V — een erkenning die de tweeweekse EMA-studie naar dagelijkse social mediadynamiek en emotioneel welzijn mogelijk maakt, en waarvoor we dankbaar zijn.</p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Onderzoeksbeurs toegekend door Amsterdams Universiteitsfonds</h3>
-          <p>Het Digitale Jeugd Project ontving een onderzoeksbeurs van €10.360 van het Amsterdams Universiteitsfonds ter ondersteuning van Studie V — een erkenning die de tweeweekse EMA-studie naar dagelijkse social mediadynamiek en emotioneel welzijn mogelijk maakt, en waarvoor we dankbaar zijn.</p>
-        </div>
+        <div class="news-logo logo-dark"><img src="../img/logo-uva.png" alt=""></div>
       </div>
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">Januari 2026</span>
-          <span class="news-tag tag-publication">Publicatie</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">Januari 2026</span>
+            <span class="news-tag tag-publication">Publicatie</span>
+          </div>
+          <div class="news-content">
+            <h3>Studie III gepubliceerd in Addictive Behaviors</h3>
+            <p>Onze laboratoriumstudie naar ADHD-symptomen en problematisch digitaal mediagebruik bij jongvolwassenen is nu gepubliceerd in Addictive Behaviors. <a href="https://doi.org/10.1016/j.addbeh.2026.108608" target="_blank">Lees het hier →</a></p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Studie III gepubliceerd in Addictive Behaviors</h3>
-          <p>Onze laboratoriumstudie naar ADHD-symptomen en problematisch digitaal mediagebruik bij jongvolwassenen is nu gepubliceerd in Addictive Behaviors. <a href="https://doi.org/10.1016/j.addbeh.2026.108608" target="_blank">Lees het hier →</a></p>
-        </div>
+        <div class="news-logo"><img src="../img/logo-elsevier.webp" alt=""></div>
       </div>
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">September 2025</span>
-          <span class="news-tag tag-publication">Publicatie</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">September 2025</span>
+            <span class="news-tag tag-publication">Publicatie</span>
+          </div>
+          <div class="news-content">
+            <h3>Studie II gepubliceerd in Journal of Research on Adolescence</h3>
+            <p>Onze tweejarige longitudinale studie met 645 Nederlandse adolescenten is nu beschikbaar als open access in het Journal of Research on Adolescence. Het artikel pakt een van de centrale debatten in het veld aan — wat komt eerst, emotionele problemen of problematisch gebruik — en stelt vast dat het antwoord sterk afhangt van wie je het vraagt. <a href="https://doi.org/10.1111/jora.70076" target="_blank">Lees het hier →</a></p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Studie II gepubliceerd in Journal of Research on Adolescence</h3>
-          <p>Onze tweejarige longitudinale studie met 645 Nederlandse adolescenten is nu beschikbaar als open access in het Journal of Research on Adolescence. Het artikel pakt een van de centrale debatten in het veld aan — wat komt eerst, emotionele problemen of problematisch gebruik — en stelt vast dat het antwoord sterk afhangt van wie je het vraagt. <a href="https://doi.org/10.1111/jora.70076" target="_blank">Lees het hier →</a></p>
-        </div>
+        <div></div>
       </div>
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">Juli 2025</span>
-          <span class="news-tag tag-conference">Conferentie</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">Juli 2025</span>
+            <span class="news-tag tag-conference">Conferentie</span>
+          </div>
+          <div class="news-content">
+            <h3>Poster en flash talk op Digital Media and Developing Minds Congress — Washington DC, VS</h3>
+            <p>Bevindingen uit ons onderzoek naar geestelijke gezondheid en problematisch digitaal mediagebruik bij adolescenten werden gepresenteerd op dit internationale wetenschappelijk congres, dat enkele van de toonaangevende onderzoekers op het snijvlak van technologie en jeugdontwikkeling samenbrengt.</p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Poster en flash talk op Digital Media and Developing Minds Congress — Washington DC, VS</h3>
-          <p>Bevindingen uit ons onderzoek naar geestelijke gezondheid en problematisch digitaal mediagebruik bij adolescenten werden gepresenteerd op dit internationale wetenschappelijk congres, dat enkele van de toonaangevende onderzoekers op het snijvlak van technologie en jeugdontwikkeling samenbrengt.</p>
-        </div>
+        <div class="news-logo"><img src="../img/logo-children-screens.png" alt=""></div>
       </div>
     </div>
   </div>

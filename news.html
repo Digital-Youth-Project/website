@@ -18,56 +18,50 @@
 <style>
 .news-list { display: flex; flex-direction: column; gap: 0; }
 .news-item {
+  display: grid;
+  grid-template-columns: 1fr 72px;
+  gap: 0 28px;
   padding: 44px 0;
   border-bottom: 1px solid var(--border);
+  align-items: start;
 }
 .news-item:last-child { border-bottom: none; }
+.news-item-body { min-width: 0; }
 .news-top {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 14px;
 }
-.news-date {
-  font-family: var(--font-b);
-  font-size: .78rem;
-  font-weight: 600;
-  color: var(--light);
-}
-.news-tag {
-  display: inline-block;
-  font-size: .6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  padding: 3px 9px;
-  border-radius: 100px;
-  font-family: var(--font-b);
-}
+.news-date { font-family: var(--font-b); font-size: .78rem; font-weight: 600; color: var(--light); }
+.news-tag { display: inline-block; font-size: .6rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; padding: 3px 9px; border-radius: 100px; font-family: var(--font-b); }
 .tag-recruitment  { background: var(--blue-soft); color: var(--blue); }
 .tag-conference   { background: var(--teal-soft); color: #007A88; }
 .tag-collaboration{ background: #EDE9FE; color: #5B21B6; }
 .tag-grant        { background: #EDFDF4; color: #0A7A45; }
 .tag-publication  { background: #FFF4EC; color: #B04A00; }
-.news-content h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 12px;
-  font-family: var(--font-d);
-  line-height: 1.3;
-}
-.news-content p {
-  font-size: .92rem;
-  color: var(--muted);
-  line-height: 1.8;
-  margin: 0;
-  max-width: 720px;
-}
-.news-content a { color: var(--blue); font-weight: 600; }
+.news-content h3 { font-size: 1.2rem; font-weight: 700; color: var(--navy); margin-bottom: 12px; font-family: var(--font-d); line-height: 1.3; }
+.news-content p  { font-size: .92rem; color: var(--muted); line-height: 1.8; margin: 0; max-width: 680px; }
+.news-content a  { color: var(--blue); font-weight: 600; }
 .news-content a:hover { text-decoration: underline; }
+.news-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.news-logo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.news-logo.logo-dark { background: #000; }
 @media (max-width: 640px) {
-  .news-item { padding: 32px 0; }
+  .news-item { grid-template-columns: 1fr; gap: 16px; padding: 32px 0; }
+  .news-logo { width: 56px; height: 56px; }
 }
 </style>
 </head>
@@ -138,74 +132,95 @@
   <div class="container">
     <div class="news-list">
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">May 2026</span>
-          <span class="news-tag tag-recruitment">Recruitment</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">May 2026</span>
+            <span class="news-tag tag-recruitment">Recruitment</span>
+          </div>
+          <div class="news-content">
+            <h3>We are looking for participants!</h3>
+            <p>We are actively recruiting participants aged 16–21 for our two-week smartphone study on social media and emotional well-being. If you work with young people or know someone who fits the profile, schools, clinics, and youth organisations interested in facilitating recruitment are warmly encouraged to reach out — every participant makes a valuable contribution.</p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Study V recruitment is open</h3>
-          <p>We are actively recruiting participants aged 16–21 for our two-week smartphone study on social media and emotional well-being. If you work with young people or know someone who fits the profile, schools, clinics, and youth organisations interested in facilitating recruitment are warmly encouraged to reach out — every participant makes a valuable contribution.</p>
-        </div>
+        <div class="news-logo logo-dark"><img src="img/logo-uva.png" alt=""></div>
       </div>
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">April 2026</span>
-          <span class="news-tag tag-conference">Conference</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">April 2026</span>
+            <span class="news-tag tag-conference">Conference</span>
+          </div>
+          <div class="news-content">
+            <h3>Our work presented at SRA Biennial Meeting — Toronto, Canada</h3>
+            <p>Luka Todorović presented a poster on Study I at the Society for Research on Adolescence biennial meeting — one of the leading international gatherings of adolescence researchers — sharing early findings from our focus group work with Dutch teenagers. Helle Larsen attended the conference and organised a symposium.</p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Focus groups study presented at SRA Biennial Meeting — Toronto, Canada</h3>
-          <p>Luka Todorović presented a poster on Study I at the Society for Research on Adolescence biennial meeting — one of the leading international gatherings of adolescence researchers — sharing early findings from our focus group work with Dutch teenagers. Helle Larsen attended the conference and organised a symposium.</p>
-        </div>
+        <div class="news-logo"><img src="img/logo-sra-2026.jpg" alt=""></div>
       </div>
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">March 2026</span>
-          <span class="news-tag tag-collaboration">Collaboration</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">March 2026</span>
+            <span class="news-tag tag-collaboration">Collaboration</span>
+          </div>
+          <div class="news-content">
+            <h3>Erasmus+ application submitted with European partners</h3>
+            <p>The Digital Youth Project joined a consortium led by Fundació Pere Tarrés (Spain) in applying for an Erasmus+ KA220 grant of €250,000 — a significant step toward translating DYP research into practical tools for youth digital well-being across educational and leisure settings in Europe. We are awaiting the decision in July 2026.</p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Erasmus+ application submitted with European partners</h3>
-          <p>The Digital Youth Project joined a consortium led by Fundació Pere Tarrés (Spain) in applying for an Erasmus+ KA220 grant of €250,000 — a significant step toward translating DYP research into practical tools for youth digital well-being across educational and leisure settings in Europe.</p>
-        </div>
+        <div class="news-logo"><img src="img/logo-pere-tarres.jpg" alt=""></div>
       </div>
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">April 2026</span>
-          <span class="news-tag tag-grant">Grant</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">April 2026</span>
+            <span class="news-tag tag-grant">Grant</span>
+          </div>
+          <div class="news-content">
+            <h3>Amsterdam University Fund grant awarded</h3>
+            <p>The Digital Youth Project received a research grant of €10,360 from the Amsterdam University Fund to support Study V — a recognition that makes the two-week EMA study on daily social media dynamics and emotional well-being possible, and that we are grateful for.</p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Amsterdam University Fund grant awarded</h3>
-          <p>The Digital Youth Project received a research grant of €10,360 from the Amsterdam University Fund to support Study V — a recognition that makes the two-week EMA study on daily social media dynamics and emotional well-being possible, and that we are grateful for.</p>
-        </div>
+        <div class="news-logo logo-dark"><img src="img/logo-uva.png" alt=""></div>
       </div>
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">January 2026</span>
-          <span class="news-tag tag-publication">Publication</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">January 2026</span>
+            <span class="news-tag tag-publication">Publication</span>
+          </div>
+          <div class="news-content">
+            <h3>Study III published in Addictive Behaviors</h3>
+            <p>Our laboratory study on ADHD symptoms and problematic digital media use in emerging adults is now published in Addictive Behaviors. <a href="https://doi.org/10.1016/j.addbeh.2026.108608" target="_blank">Read it here →</a></p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Study III published in Addictive Behaviors</h3>
-          <p>Our laboratory study on ADHD symptoms and problematic digital media use in emerging adults is now published in Addictive Behaviors. <a href="https://doi.org/10.1016/j.addbeh.2026.108608" target="_blank">Read it here →</a></p>
-        </div>
+        <div class="news-logo"><img src="img/logo-elsevier.webp" alt=""></div>
       </div>
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">September 2025</span>
-          <span class="news-tag tag-publication">Publication</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">September 2025</span>
+            <span class="news-tag tag-publication">Publication</span>
+          </div>
+          <div class="news-content">
+            <h3>Study II published in Journal of Research on Adolescence</h3>
+            <p>Our two-year longitudinal study following 645 Dutch adolescents is now available open access in the Journal of Research on Adolescence. The paper tackles one of the field's central debates — what comes first, emotional problems or problematic use — and finds that the answer depends meaningfully on who you are asking about. <a href="https://doi.org/10.1111/jora.70076" target="_blank">Read it here →</a></p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Study II published in Journal of Research on Adolescence</h3>
-          <p>Our two-year longitudinal study following 645 Dutch adolescents is now available open access in the Journal of Research on Adolescence. The paper tackles one of the field's central debates — what comes first, emotional problems or problematic use — and finds that the answer depends meaningfully on who you are asking about. <a href="https://doi.org/10.1111/jora.70076" target="_blank">Read it here →</a></p>
-        </div>
+        <div></div>
       </div>
       <div class="news-item">
-        <div class="news-top">
-          <span class="news-date">July 2025</span>
-          <span class="news-tag tag-conference">Conference</span>
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">July 2025</span>
+            <span class="news-tag tag-conference">Conference</span>
+          </div>
+          <div class="news-content">
+            <h3>Poster and flash talk at Digital Media and Developing Minds Congress — Washington DC, USA</h3>
+            <p>Findings from our research on mental health and problematic digital media use in adolescents were presented at this international scientific congress, bringing together some of the leading researchers working at the intersection of technology and youth development.</p>
+          </div>
         </div>
-        <div class="news-content">
-          <h3>Poster and flash talk at Digital Media and Developing Minds Congress — Washington DC, USA</h3>
-          <p>Findings from our research on mental health and problematic digital media use in adolescents were presented at this international scientific congress, bringing together some of the leading researchers working at the intersection of technology and youth development.</p>
-        </div>
+        <div class="news-logo"><img src="img/logo-children-screens.png" alt=""></div>
       </div>
     </div>
   </div>
