@@ -133,7 +133,7 @@ p.lead{font-size:1.08rem;color:var(--text);}
 .sc-year{font-size:.78rem;color:var(--light);font-weight:500;}
 
 /* TEAM CARDS */
-.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;align-items:stretch;}
 .team-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 26px;box-shadow:var(--shadow-sm);}
 .team-photo-wrap{margin-bottom:16px;}
 .team-photo{width:68px;height:68px;border-radius:50%;object-fit:cover;border:3px solid var(--blue-soft);}
@@ -443,6 +443,8 @@ p.lead{font-size:1.08rem;color:var(--text);}
 
 /* Internship card */
 .team-card-internship {
+  height: 100%;
+  box-sizing: border-box;
   background: linear-gradient(135deg, #f8f9fb 0%, #eef0f5 100%);
   border: 1.5px solid #c8cdd8;
   border-radius: 14px;
@@ -475,7 +477,15 @@ p.lead{font-size:1.08rem;color:var(--text);}
 .team-card {
   display: flex;
   flex-direction: column;
+  height: 100%;
+}
+.team-card-body-wrap {
+  flex: 1;
 }
 .team-bio {
   flex-grow: 1;
+}
+.team-card-internship {
+  height: 100%;
+  box-sizing: border-box;
 }
