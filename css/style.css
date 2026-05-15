@@ -154,9 +154,9 @@ p.lead{font-size:1.08rem;color:var(--text);}
 .study-hero h1{color:#fff;font-size:clamp(1.45rem,3.5vw,2.3rem);max-width:680px;margin-bottom:14px;}
 .study-hero-sub{color:rgba(255,255,255,.55);max-width:580px;margin-bottom:22px;font-family:var(--font-b);}
 .study-badges{display:flex;gap:9px;flex-wrap:wrap;}
-.study-layout{max-width:1120px;margin:0 auto;padding:56px 24px 80px;display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start;}
+.study-layout{max-width:1120px;margin:0 auto;padding:56px 24px 80px;display:grid;grid-template-columns:1fr 300px;gap:48px;}
 .study-main{min-width:0;}
-.study-sidebar{position:sticky;top:80px;}
+.study-sidebar{}
 .study-section{margin-bottom:44px;padding-bottom:44px;border-bottom:1px solid var(--border);}
 .study-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
 .study-section h2{font-size:1.2rem;margin-bottom:14px;}
@@ -401,7 +401,7 @@ p.lead{font-size:1.08rem;color:var(--text);}
     padding: 32px 18px 56px;
   }
   /* Swap order: sidebar first, main content second */
-  .study-sidebar { order: -1; position: static; }
+  .study-sidebar { order: -1; }
   .study-main    { order:  1; }
 
   /* Study meta card */
@@ -433,7 +433,7 @@ p.lead{font-size:1.08rem;color:var(--text);}
 @media (min-width: 641px) and (max-width: 900px) {
   .hero-stats { gap: 28px; }
   .study-layout { grid-template-columns: 1fr; gap: 36px; }
-  .study-sidebar { position: static; order: -1; }
+  .study-sidebar { order: -1; }
   .contact-grid { grid-template-columns: 1fr; gap: 32px; }
   .cta-inner { flex-direction: column; gap: 20px; }
   .cta-actions .btn { width: auto; }
