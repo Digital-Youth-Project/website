@@ -77,7 +77,7 @@
     <a href="research.html" class="study-back">← All research</a>
     <div class="study-badges" style="margin-bottom:16px;">
       <span class="badge badge-blue">Study I</span>
-      <span class="badge badge-yellow">In Review</span>
+      <span class="badge badge-green">Published 2026</span>
     </div>
     <h1>Adolescents' Perspectives on Self-Regulation and Need for Change in Digital Media Use</h1>
     <p class="study-hero-sub">A focus group study exploring how teenagers in Dutch secondary schools experience, make sense of, and want to change their digital media use.</p>
@@ -109,12 +109,26 @@
 
     <div class="study-section">
       <h2>Status</h2>
-      <p>The study is complete and the manuscript is currently under review for publication. Findings will be shared on this page once published. If you are interested in receiving updates or discussing the work, please get in touch.</p>
+      <p>The study is now published in Journal of Adolescence. The full citation, PDF, and DOI link are available in the sidebar. If you are interested in discussing the work, please get in touch.</p>
     </div>
 
   </main>
 
   <aside class="study-sidebar">
+
+    <div class="study-meta-card">
+      <div class="smc-title" style="font-family:var(--font-d);font-size:.9rem;font-weight:700;color:var(--navy);letter-spacing:0;text-transform:none;">Read the publication</div>
+      <p style="font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:14px;">Todorovic, L., Bogaerts, A., &amp; Larsen, H. (2026). <em>Journal of Adolescence</em>, 1–11.</p>
+      <a href="https://doi.org/10.1002/jad.70220" target="_blank" class="btn btn-navy btn-sm" style="width:100%;justify-content:center;margin-bottom:10px;">DOI link →</a>
+      <button class="pdf-btn" onclick="openModal('modal-fg')">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Read full paper
+      </button>
+      <a href="pdfs/focus-groups-study.pdf" download class="pdf-btn-dl">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download PDF
+      </a>
+    </div>
 
     <div class="study-meta-card">
       <div class="smc-title">Study details</div>
@@ -135,6 +149,19 @@
     </div>
 
   </aside>
+</div>
+
+<!-- PDF MODAL -->
+<div class="modal-overlay" id="modal-fg" onclick="if(event.target===this)closeModal('modal-fg')">
+  <div class="modal-box">
+    <div class="modal-header">
+      <span class="modal-title">Todorovic, Bogaerts &amp; Larsen (2026) — Journal of Adolescence</span>
+      <button class="modal-close" onclick="closeModal('modal-fg')">✕</button>
+    </div>
+    <div class="modal-body">
+      <iframe src="pdfs/focus-groups-study.pdf" title="Study I PDF"></iframe>
+    </div>
+  </div>
 </div>
 
 <section class="cta-banner">
@@ -163,6 +190,12 @@
     </div>
   </div>
 </footer>
+
+<script>
+function openModal(id){document.getElementById(id).classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.open').forEach(m=>m.classList.remove('open'));document.body.style.overflow='';}});
+</script>
 
 <script>
 (function(){
