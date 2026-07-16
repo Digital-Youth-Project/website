@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://digital-youth-project.github.io/website/sitemap.xml
+Sitemap: https://digitalyouthproject.nl/sitemap.xml

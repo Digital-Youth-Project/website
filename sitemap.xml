@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- English pages -->
-  <url><loc>https://digital-youth-project.github.io/website/</loc><priority>1.0</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/research.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/team.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/contact.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/study-focus-groups.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/study-mental-health.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/study-adhd.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/study-content.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/study-ema.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/study-perceived-addiction.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/</loc><priority>1.0</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/research.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/team.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/contact.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/study-focus-groups.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/study-mental-health.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/study-adhd.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/study-content.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/study-ema.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/study-perceived-addiction.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
 
-  <url><loc>https://digital-youth-project.github.io/website/news.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/news.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
 
   <!-- Dutch pages -->
-  <url><loc>https://digital-youth-project.github.io/website/nl/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/nl/research.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/nl/team.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/nl/contact.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/nl/study-focus-groups.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/nl/study-mental-health.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/nl/study-adhd.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/nl/study-content.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/nl/study-ema.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
-  <url><loc>https://digital-youth-project.github.io/website/nl/study-perceived-addiction.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/nl/</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/nl/research.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/nl/team.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/nl/contact.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/nl/study-focus-groups.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/nl/study-mental-health.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/nl/study-adhd.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/nl/study-content.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/nl/study-ema.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/nl/study-perceived-addiction.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
 
-  <url><loc>https://digital-youth-project.github.io/website/nl/news.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://digitalyouthproject.nl/nl/news.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
 
 </urlset>
