@@ -489,3 +489,17 @@ p.lead{font-size:1.08rem;color:var(--text);}
   height: 100%;
   box-sizing: border-box;
 }
+
+/* Publications list (research page) */
+.pub-list{list-style:none;border-top:1px solid var(--border);}
+.pub-item{display:grid;grid-template-columns:1fr auto;gap:10px 36px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--border);}
+.pub-cite{font-size:.92rem;color:var(--text);line-height:1.7;font-family:var(--font-b);}
+.pub-links{display:flex;gap:18px;white-space:nowrap;}
+.pub-links a{font-size:.82rem;font-weight:600;color:var(--blue);font-family:var(--font-b);}
+.pub-links a:hover{text-decoration:underline;}
+@media(max-width:640px){.pub-item{grid-template-columns:1fr;}}
+
+/* Contact icons (line SVGs) */
+.cd-icon{color:var(--blue);}
+.ct-icon{display:flex;color:var(--teal);padding-top:1px;}
+.cd-icon svg,.ct-icon svg{display:block;}
