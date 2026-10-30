@@ -27,11 +27,11 @@
 .news-list { display: flex; flex-direction: column; gap: 0; }
 .news-item {
   display: grid;
-  grid-template-columns: 1fr 72px;
-  gap: 0 28px;
+  grid-template-columns: 1fr 128px;
+  gap: 0 48px;
   padding: 44px 0;
   border-bottom: 1px solid var(--border);
-  align-items: start;
+  align-items: center;
 }
 .news-item:last-child { border-bottom: none; }
 .news-item-body { min-width: 0; }
@@ -53,12 +53,12 @@
 .news-content a  { color: var(--blue); font-weight: 600; }
 .news-content a:hover { text-decoration: underline; }
 .news-logo {
-  width: 72px;
-  height: 72px;
-  border-radius: 10px;
+  width: 128px;
+  height: 128px;
+  border-radius: 12px;
   overflow: hidden;
   flex-shrink: 0;
-  margin-top: 4px;
+  justify-self: end;
   border: 1px solid var(--border);
   background: #fff;
   display: flex;
@@ -70,7 +70,7 @@
 .news-logo.logo-dark { background: #000; }
 @media (max-width: 640px) {
   .news-item { grid-template-columns: 1fr; gap: 16px; padding: 32px 0; }
-  .news-logo { width: 56px; height: 56px; }
+  .news-logo { width: 96px; height: 96px; justify-self: start; }
 }
 </style>
 <!-- Google tag (gtag.js) -->
@@ -155,8 +155,8 @@
             <span class="news-tag tag-publication">Publicatie</span>
           </div>
           <div class="news-content">
-            <h3>Studie gepubliceerd in Journal of Adolescence</h3>
-            <p>Onze focusgroepstudie naar hoe Nederlandse adolescenten hun digitale mediagebruik ervaren, begrijpen en willen veranderen is nu gepubliceerd in Journal of Adolescence. <a href="https://doi.org/10.1002/jad.70220" target="_blank">Lees het hier →</a></p>
+            <h3>Focusgroepstudie gepubliceerd in Journal of Adolescence</h3>
+            <p>Onze focusgroepstudie met 78 Nederlandse adolescenten is nu open access gepubliceerd in de Journal of Adolescence. Jongeren beschreven zowel de voordelen als de nadelen van hun digitale mediagebruik, en pleitten voor oplossingen die verder gaan dan individuele zelfbeheersing, samen met ouders, leeftijdsgenoten, scholen en platforms. <a href="https://doi.org/10.1002/jad.70220" target="_blank">Lees het artikel →</a></p>
           </div>
         </div>
         <div class="news-logo"><img src="../img/logo-wiley.png" alt="Wiley"></div>
@@ -168,8 +168,8 @@
             <span class="news-tag tag-conference">Conferentie</span>
           </div>
           <div class="news-content">
-            <h3>Studie I gepresenteerd op de 28e ISSBD Biennial Meeting, Incheon, Zuid-Korea</h3>
-            <p>Onze focusgroepstudie werd gepresenteerd in een symposium op de 28e Biennial Meeting van de International Society for the Study of Behavioural Development, een van de grootste internationale congressen over menselijke ontwikkeling, gehouden in Incheon, Zuid-Korea.</p>
+            <h3>Focusgroepbevindingen gepresenteerd op ISSBD 2026 in Incheon</h3>
+            <p>Onze focusgroepstudie werd gepresenteerd in een symposium op de 28e Biennial Meeting van de International Society for the Study of Behavioural Development (ISSBD) in Incheon, Zuid-Korea. Het congres is een van de grootste internationale bijeenkomsten over menselijke ontwikkeling.</p>
           </div>
         </div>
         <div class="news-logo"><img src="../img/logo-issbd.svg" alt="ISSBD"></div>
@@ -181,8 +181,8 @@
             <span class="news-tag tag-conference">Conferentie</span>
           </div>
           <div class="news-content">
-            <h3>Studie IV gepresenteerd op het VNOP-congres, Rotterdam</h3>
-            <p>Onze studie naar social media-inhoud en pornografie-gerelateerde drang werd gepresenteerd in een symposium op het VNOP-congres 2026 (Vereniging voor Nederlandse Ontwikkelings-Psychologie), de Nederlandse vereniging voor ontwikkelingspsychologie, gehouden in Rotterdam.</p>
+            <h3>Studie naar social media-inhoud gepresenteerd op het VNOP-congres in Rotterdam</h3>
+            <p>Onze experimentele studie naar geseksualiseerde social media-inhoud en pornografie-gerelateerde begeerte werd gepresenteerd in een symposium op het congres van de Vereniging voor Nederlandse Ontwikkelings-Psychologie (VNOP) 2026 in Rotterdam. Het thema van dit jaar was hoe ontwikkelingswetenschap kan inspelen op maatschappelijke vragen zonder haar wetenschappelijke fundament te verliezen.</p>
           </div>
         </div>
         <div class="news-logo"><img src="../img/logo-vnop.svg" alt="VNOP"></div>
@@ -191,11 +191,24 @@
         <div class="news-item-body">
           <div class="news-top">
             <span class="news-date">Mei 2026</span>
+            <span class="news-tag tag-conference">Conferentie</span>
+          </div>
+          <div class="news-content">
+            <h3>Voorlopige bevindingen over social media-inhoud gepresenteerd op APS 2026 in Barcelona</h3>
+            <p>Op de APS Annual Convention 2026 in Barcelona presenteerden we met een poster voorlopige bevindingen uit onze experimentele studie naar geseksualiseerde social media-inhoud en pornografie-gerelateerde begeerte. Het was de eerste keer dat de Association for Psychological Science haar jaarlijkse congres buiten de Verenigde Staten hield.</p>
+          </div>
+        </div>
+        <div class="news-logo"><img src="../img/logo-aps.png" alt="APS" onerror="this.parentElement.style.display='none'"></div>
+      </div>
+      <div class="news-item">
+        <div class="news-item-body">
+          <div class="news-top">
+            <span class="news-date">Mei 2026</span>
             <span class="news-tag tag-recruitment">Werving</span>
           </div>
           <div class="news-content">
-            <h3>We zijn op zoek naar deelnemers!</h3>
-            <p>We werven actief deelnemers van 16–21 jaar voor onze tweeweekse smartphonestudie over social media en emotioneel welzijn. Als u met jongeren werkt of iemand kent die in aanmerking komt, zijn scholen, klinieken en jongerenorganisaties van harte welkom contact op te nemen. Elke deelnemer levert een waardevolle bijdrage.</p>
+            <h3>Deelnemers gezocht voor onze smartphonestudie</h3>
+            <p>We zoeken jongeren van 16 tot 21 jaar voor een tweeweekse smartphonestudie naar social mediagebruik en emotioneel welzijn, met korte vragenlijsten van ongeveer een minuut. Scholen, klinieken en jongerenorganisaties die willen helpen bij de werving, nodigen we van harte uit contact op te nemen.</p>
           </div>
         </div>
         <div class="news-logo logo-dark"><img src="../img/logo-uva.png" alt=""></div>
@@ -207,8 +220,8 @@
             <span class="news-tag tag-conference">Conferentie</span>
           </div>
           <div class="news-content">
-            <h3>Ons werk gepresenteerd op de SRA Biennial Meeting, Toronto, Canada</h3>
-            <p>Luka Todorović presenteerde een poster over Studie I op de tweejaarlijkse bijeenkomst van de Society for Research on Adolescence, een van de toonaangevende internationale bijeenkomsten van adolescentieonderzoekers, en deelde vroege bevindingen uit ons focusgroeponderzoek met Nederlandse tieners. Helle Larsen woonde de conferentie bij en organiseerde een symposium.</p>
+            <h3>Eerste focusgroepbevindingen gepresenteerd op SRA 2026 in Toronto</h3>
+            <p>Luka Todorović presenteerde een poster met eerste bevindingen uit onze focusgroepstudie op de tweejaarlijkse bijeenkomst van de Society for Research on Adolescence (SRA) in Toronto, een van de toonaangevende internationale bijeenkomsten van adolescentieonderzoekers. Helle Larsen woonde de bijeenkomst bij en organiseerde een symposium.</p>
           </div>
         </div>
         <div class="news-logo"><img src="../img/logo-sra-2026.jpg" alt=""></div>
@@ -220,8 +233,8 @@
             <span class="news-tag tag-grant">Subsidie</span>
           </div>
           <div class="news-content">
-            <h3>Onderzoeksbeurs toegekend door Amsterdams Universiteitsfonds</h3>
-            <p>Het Digitale Jeugd Project ontving een onderzoeksbeurs van €10.000 van het Amsterdams Universiteitsfonds ter ondersteuning van Studie V, een erkenning die de tweeweekse EMA-studie naar dagelijkse social mediadynamiek en emotioneel welzijn mogelijk maakt, en waarvoor we dankbaar zijn.</p>
+            <h3>Amsterdams Universiteitsfonds steunt onze smartphonestudie</h3>
+            <p>Het Digitale Jeugd Project ontving een beurs van €10.000 van het Amsterdams Universiteitsfonds. De beurs maakt onze tweeweekse smartphonestudie naar dagelijks social mediagebruik en emotioneel welzijn mogelijk, en we zijn dankbaar voor de steun.</p>
           </div>
         </div>
         <div class="news-logo logo-dark"><img src="../img/logo-uva.png" alt=""></div>
@@ -233,8 +246,8 @@
             <span class="news-tag tag-publication">Publicatie</span>
           </div>
           <div class="news-content">
-            <h3>Studie gepubliceerd in Addictive Behaviors</h3>
-            <p>Onze laboratoriumstudie naar ADHD-symptomen en problematisch digitaal mediagebruik bij jongvolwassenen is nu gepubliceerd in Addictive Behaviors. <a href="https://doi.org/10.1016/j.addbeh.2026.108608" target="_blank">Lees het hier →</a></p>
+            <h3>ADHD-studie gepubliceerd in Addictive Behaviors</h3>
+            <p>Onze laboratoriumstudie naar ADHD-symptomen en problematisch digitaal mediagebruik bij jongvolwassenen is nu gepubliceerd in Addictive Behaviors. De studie onderzocht of inhibitiecontrole, beloningsgevoeligheid en tijdwaarneming verklaren waarom ADHD-symptomen samenhangen met problematisch social mediagebruik en gaming. <a href="https://doi.org/10.1016/j.addbeh.2026.108608" target="_blank">Lees het artikel →</a></p>
           </div>
         </div>
         <div class="news-logo"><img src="../img/logo-elsevier.png" alt="Elsevier"></div>
@@ -246,8 +259,8 @@
             <span class="news-tag tag-publication">Publicatie</span>
           </div>
           <div class="news-content">
-            <h3>Studie gepubliceerd in Journal of Research on Adolescence</h3>
-            <p>Onze tweejarige longitudinale studie met 645 Nederlandse adolescenten is nu beschikbaar als open access in het Journal of Research on Adolescence. Het artikel pakt een van de centrale debatten in het veld aan (wat komt eerst: emotionele problemen of problematisch gebruik?) en stelt vast dat het antwoord sterk afhangt van wie je het vraagt. <a href="https://doi.org/10.1111/jora.70076" target="_blank">Lees het hier →</a></p>
+            <h3>Longitudinale studie gepubliceerd in Journal of Research on Adolescence</h3>
+            <p>Onze tweejarige longitudinale studie met 645 Nederlandse adolescenten is nu open access beschikbaar in het Journal of Research on Adolescence. Het artikel gaat in op een centrale vraag in het veld, of emotionele problemen of problematisch gebruik eerst komen, en laat zien dat het antwoord verschilt tussen meisjes en jongens. <a href="https://doi.org/10.1111/jora.70076" target="_blank">Lees het artikel →</a></p>
           </div>
         </div>
         <div class="news-logo"><img src="../img/logo-wiley.png" alt="Wiley"></div>
@@ -259,8 +272,8 @@
             <span class="news-tag tag-conference">Conferentie</span>
           </div>
           <div class="news-content">
-            <h3>Poster en flash talk op Digital Media and Developing Minds Congress, Washington DC, VS</h3>
-            <p>Bevindingen uit ons onderzoek naar geestelijke gezondheid en problematisch digitaal mediagebruik bij adolescenten werden gepresenteerd op dit internationale wetenschappelijk congres, dat enkele van de toonaangevende onderzoekers op het snijvlak van technologie en jeugdontwikkeling samenbrengt.</p>
+            <h3>Poster en flash talk op het Digital Media and Developing Minds Congress in Washington, DC</h3>
+            <p>We presenteerden bevindingen over geestelijke gezondheid en problematisch digitaal mediagebruik bij adolescenten op dit internationale wetenschappelijke congres in Washington, DC. Het congres brengt toonaangevende onderzoekers samen op het snijvlak van technologie en jeugdontwikkeling.</p>
           </div>
         </div>
         <div class="news-logo"><img src="../img/logo-children-screens.png" alt=""></div>
