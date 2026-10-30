@@ -27,14 +27,14 @@
 .news-list { display: flex; flex-direction: column; gap: 0; }
 .news-item {
   display: grid;
-  grid-template-columns: 1fr 128px;
-  gap: 0 48px;
+  grid-template-columns: 128px 1fr;
+  gap: 0 40px;
   padding: 44px 0;
   border-bottom: 1px solid var(--border);
-  align-items: center;
+  align-items: start;
 }
 .news-item:last-child { border-bottom: none; }
-.news-item-body { min-width: 0; }
+.news-item-body { min-width: 0; grid-column: 2; grid-row: 1; }
 .news-top {
   display: flex;
   align-items: center;
@@ -58,7 +58,9 @@
   border-radius: 12px;
   overflow: hidden;
   flex-shrink: 0;
-  justify-self: end;
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: 2px;
   border: 1px solid var(--border);
   background: #fff;
   display: flex;
@@ -70,7 +72,8 @@
 .news-logo.logo-dark { background: #000; }
 @media (max-width: 640px) {
   .news-item { grid-template-columns: 1fr; gap: 16px; padding: 32px 0; }
-  .news-logo { width: 96px; height: 96px; justify-self: start; }
+  .news-logo { width: 88px; height: 88px; grid-row: 1; }
+  .news-item-body { grid-column: 1; grid-row: 2; }
 }
 </style>
 <!-- Google tag (gtag.js) -->
@@ -198,7 +201,7 @@
             <p>Op de APS Annual Convention 2026 in Barcelona presenteerden we met een poster voorlopige bevindingen uit onze experimentele studie naar geseksualiseerde social media-inhoud en pornografie-gerelateerde begeerte. Het was de eerste keer dat de Association for Psychological Science haar jaarlijkse congres buiten de Verenigde Staten hield.</p>
           </div>
         </div>
-        <div class="news-logo"><img src="../img/logo-aps.png" alt="APS" onerror="this.parentElement.style.display='none'"></div>
+        <div class="news-logo"><img src="../img/logo-aps.png" alt="APS"></div>
       </div>
       <div class="news-item">
         <div class="news-item-body">
