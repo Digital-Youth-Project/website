@@ -71,9 +71,13 @@
 .news-logo-elsevier img { object-fit: contain; padding: 5px; }
 .news-logo.logo-dark { background: #000; }
 @media (max-width: 640px) {
-  .news-item { grid-template-columns: 1fr; gap: 16px; padding: 32px 0; }
-  .news-logo { width: 88px; height: 88px; grid-row: 1; }
-  .news-item-body { grid-column: 1; grid-row: 2; }
+  /* phone: date + label on top, small logo beside the headline, text full width below */
+  .news-item { grid-template-columns: 60px 1fr; grid-template-areas: "top top" "logo title" "text text"; gap: 14px 16px; padding: 30px 0; align-items: center; }
+  .news-item-body, .news-content { display: contents; }
+  .news-top { grid-area: top; margin-bottom: 0; }
+  .news-logo { grid-area: logo; width: 60px; height: 60px; margin-top: 0; border-radius: 8px; }
+  .news-content h3 { grid-area: title; margin-bottom: 0; font-size: 1.05rem; }
+  .news-content p { grid-area: text; }
 }
 </style>
 <!-- Google tag (gtag.js) -->
@@ -172,7 +176,7 @@
           </div>
           <div class="news-content">
             <h3>Focus group findings presented at ISSBD 2026 in Incheon, South Korea</h3>
-            <p>Our focus group study was presented in a symposium at the 28th Biennial Meeting of the International Society for the Study of Behavioural Development (ISSBD) in Incheon, South Korea. The meeting is one of the largest international conferences on human development.</p>
+            <p>We presented our focus group study in a symposium at the 28th Biennial Meeting of the International Society for the Study of Behavioural Development (ISSBD) in Incheon, South Korea. The meeting is one of the largest international conferences on human development.</p>
           </div>
         </div>
         <div class="news-logo"><img src="img/logo-issbd.svg" alt="ISSBD"></div>
@@ -185,7 +189,7 @@
           </div>
           <div class="news-content">
             <h3>Social media content study presented at the VNOP Conference in Rotterdam, the Netherlands</h3>
-            <p>Our experimental study on sexualised social media content and pornography-related desire was presented in a symposium at the 2026 conference of the Dutch Society for Developmental Psychology (VNOP) in Rotterdam. This year's theme was how developmental science can respond to societal questions without losing its scientific foundation.</p>
+            <p>We presented our experimental study on sexualised social media content and pornography-related desire in a symposium at the 2026 conference of the Dutch Society for Developmental Psychology (VNOP) in Rotterdam. This year's theme was how developmental science can respond to societal questions without losing its scientific foundation.</p>
           </div>
         </div>
         <div class="news-logo"><img src="img/logo-vnop.svg" alt="VNOP"></div>

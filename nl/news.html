@@ -71,9 +71,13 @@
 .news-logo-elsevier img { object-fit: contain; padding: 5px; }
 .news-logo.logo-dark { background: #000; }
 @media (max-width: 640px) {
-  .news-item { grid-template-columns: 1fr; gap: 16px; padding: 32px 0; }
-  .news-logo { width: 88px; height: 88px; grid-row: 1; }
-  .news-item-body { grid-column: 1; grid-row: 2; }
+  /* phone: date + label on top, small logo beside the headline, text full width below */
+  .news-item { grid-template-columns: 60px 1fr; grid-template-areas: "top top" "logo title" "text text"; gap: 14px 16px; padding: 30px 0; align-items: center; }
+  .news-item-body, .news-content { display: contents; }
+  .news-top { grid-area: top; margin-bottom: 0; }
+  .news-logo { grid-area: logo; width: 60px; height: 60px; margin-top: 0; border-radius: 8px; }
+  .news-content h3 { grid-area: title; margin-bottom: 0; font-size: 1.05rem; }
+  .news-content p { grid-area: text; }
 }
 </style>
 <!-- Google tag (gtag.js) -->
@@ -172,7 +176,7 @@
           </div>
           <div class="news-content">
             <h3>Focusgroepbevindingen gepresenteerd op ISSBD 2026 in Incheon, Zuid-Korea</h3>
-            <p>Onze focusgroepstudie werd gepresenteerd in een symposium op de 28e Biennial Meeting van de International Society for the Study of Behavioural Development (ISSBD) in Incheon, Zuid-Korea. Het congres is een van de grootste internationale bijeenkomsten over menselijke ontwikkeling.</p>
+            <p>We presenteerden onze focusgroepstudie in een symposium op de 28e Biennial Meeting van de International Society for the Study of Behavioural Development (ISSBD) in Incheon, Zuid-Korea. Het congres is een van de grootste internationale bijeenkomsten over menselijke ontwikkeling.</p>
           </div>
         </div>
         <div class="news-logo"><img src="../img/logo-issbd.svg" alt="ISSBD"></div>
@@ -185,7 +189,7 @@
           </div>
           <div class="news-content">
             <h3>Studie naar social media-inhoud gepresenteerd op het VNOP-congres in Rotterdam, Nederland</h3>
-            <p>Onze experimentele studie naar geseksualiseerde social media-inhoud en pornografie-gerelateerde begeerte werd gepresenteerd in een symposium op het congres van de Vereniging voor Nederlandse Ontwikkelings-Psychologie (VNOP) 2026 in Rotterdam. Het thema van dit jaar was hoe ontwikkelingswetenschap kan inspelen op maatschappelijke vragen zonder haar wetenschappelijke fundament te verliezen.</p>
+            <p>We presenteerden onze experimentele studie naar geseksualiseerde social media-inhoud en pornografie-gerelateerde begeerte in een symposium op het congres van de Vereniging voor Nederlandse Ontwikkelings-Psychologie (VNOP) 2026 in Rotterdam. Het thema van dit jaar was hoe ontwikkelingswetenschap kan inspelen op maatschappelijke vragen zonder haar wetenschappelijke fundament te verliezen.</p>
           </div>
         </div>
         <div class="news-logo"><img src="../img/logo-vnop.svg" alt="VNOP"></div>
