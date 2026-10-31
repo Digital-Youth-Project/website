@@ -17,19 +17,20 @@
 <meta name="twitter:title" content="Study II: Mental Health · Digital Youth Project">
 <meta name="twitter:description" content="Study II: a two-year longitudinal study of 645 Dutch adolescents on problematic social media use, gaming, and mental health, published in Journal of Research on Adolescence (2025).">
 <meta name="twitter:image" content="https://digitalyouthproject.nl/og-image.jpg">
+<link rel="canonical" href="https://digitalyouthproject.nl/study-mental-health.html">
+<link rel="alternate" hreflang="en" href="https://digitalyouthproject.nl/study-mental-health.html">
+<link rel="alternate" hreflang="nl" href="https://digitalyouthproject.nl/nl/study-mental-health.html">
+<link rel="alternate" hreflang="x-default" href="https://digitalyouthproject.nl/study-mental-health.html">
 <title>Study II: Mental Health · Digital Youth Project</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Figtree:wght@300;400;500;600&family=Syne:wght@700;800&display=swap">
   <link rel="stylesheet" href="css/style.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E1NWM7GTRB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-E1NWM7GTRB');
-</script>
+<!-- Cookie consent; Google Analytics loads only after "Accept" -->
+<script src="js/consent.js" defer></script>
 </head>
 <body>
 
@@ -133,7 +134,7 @@
 
     <div class="study-meta-card">
       <div class="smc-title" style="font-family:var(--font-d);font-size:.9rem;font-weight:700;color:var(--navy);letter-spacing:0;text-transform:none;">Read the publication</div>
-      <p style="font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:14px;">Todorovic, L., Bozhar, H., de Rooij, S.R., Bogaerts, A., Boyer, B.E., &amp; Larsen, H. (2025). <em>Journal of Research on Adolescence</em>, 35, e70076.</p>
+      <p style="font-size:.82rem;color:var(--muted);line-height:1.6;margin-bottom:14px;">Todorovic, L., Bozhar, H., de Rooij, S.R., Bogaerts, A., Boyer, B.E., &amp; Larsen, H. (2025). Bidirectional associations of problematic social media use and problematic gaming with mental health difficulties and strengths in adolescents: Sex and social support as potential moderators. <em>Journal of Research on Adolescence</em>, 35, e70076.</p>
       <a href="https://doi.org/10.1111/jora.70076" target="_blank" class="btn btn-navy btn-sm" style="width:100%;justify-content:center;margin-bottom:10px;">DOI link →</a>
       <button class="pdf-btn" onclick="openModal('modal-mh')">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
@@ -164,21 +165,15 @@
 
 <section class="cta-banner">
   <div class="cta-inner">
-    <div class="cta-text">
-      <h2>Interested in this research?</h2>
-      <p>Get in touch to discuss the findings or explore collaborations.</p>
-    </div>
-    <div class="cta-actions">
-      <a href="contact.html" class="btn btn-primary">Contact us</a>
-      <a href="research.html" class="btn btn-outline">More research</a>
-    </div>
+    <div class="cta-text"><h2>More about this study</h2><p>Contact us to learn more about this study, ask questions, or explore collaboration.</p></div>
+    <div class="cta-actions"><a href="contact.html" class="btn btn-primary">Contact us</a><a href="research.html" class="btn btn-outline">All research</a></div>
   </div>
 </section>
 
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-logo">Digital <span>Youth</span> Project · UvA</div>
-    <div class="footer-copy">© 2026 Digital Youth Project · University of Amsterdam</div>
+    <div class="footer-copy">© <span class="js-year">2026</span> Digital Youth Project · University of Amsterdam</div>
     <div class="footer-links">
       <a href="research.html">Research</a>
       <a href="team.html">Team</a>
@@ -223,5 +218,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelec
   });
 })();
 </script>
+<script>document.querySelectorAll('.js-year').forEach(function(e){e.textContent=new Date().getFullYear();});</script>
 </body>
 </html>
