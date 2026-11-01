@@ -507,3 +507,7 @@ p.lead{font-size:1.08rem;color:var(--text);}
 .page-hero .section-label{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.22);color:rgba(255,255,255,.78);}
 
 
+
+/* Closing banners: let the text run the full available width */
+.cta-text{flex:1 1 auto;min-width:0;}
+.cta-text p{max-width:none;}
